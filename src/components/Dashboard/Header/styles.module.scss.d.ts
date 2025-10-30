@@ -1,0 +1,10 @@
+export declare const active: string;
+export declare const headerContainer: string;
+export declare const headerGroup: string;
+export declare const imageContainer: string;
+export declare const imageStyle: string;
+export declare const menuButton: string;
+export declare const mobileBackdrop: string;
+export declare const mobileMenu: string;
+export declare const mobileNav: string;
+export declare const navigationStyle: string;

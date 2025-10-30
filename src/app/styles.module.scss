@@ -1,0 +1,17 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-white);
+  padding: 20px;
+  height: 100vh;
+  gap: 30px;
+}
+
+.buttonLogin {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: var(--bg-primary-normal);
+  color: var(--text-white);
+}

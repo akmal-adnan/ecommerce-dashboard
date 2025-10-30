@@ -1,9 +1,18 @@
-import React from 'react'
+import styles from '@/app/styles.module.scss';
+import Link from 'next/link';
 
-const Page = () => {
+const Home = () => {
   return (
-    <div>Hello world</div>
-  )
-}
+    <section>
+      <div className={styles.mainContainer}>
+        <h3>Landing page</h3>
 
-export default Page
+        <Link className={styles.buttonLogin} href={'/login'}>
+          Go to login page
+        </Link>
+      </div>
+    </section>
+  );
+};
+
+export default Home;

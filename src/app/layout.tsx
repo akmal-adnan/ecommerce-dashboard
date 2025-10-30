@@ -10,7 +10,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Dashboard',
+  title: 'Corebolt',
   description: 'Ecommerce Dashboard UI using NextJs',
 };
 

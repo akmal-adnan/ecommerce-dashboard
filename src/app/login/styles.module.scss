@@ -1,0 +1,27 @@
+.subTitle {
+  font-size: var(--p-4);
+  font-weight: var(--font-regular);
+  color: var(--text-sheen);
+}
+
+.logoContainer {
+  width: 180px;
+  margin-bottom: 40px;
+}
+
+.introTextContainer {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.mainContainer {
+  margin-inline: 20px;
+  height: 100vh;
+  padding-top: 16vh;
+
+  @include min-width(sm) {
+    margin-inline: auto;
+    max-width: 500px;
+  }
+}

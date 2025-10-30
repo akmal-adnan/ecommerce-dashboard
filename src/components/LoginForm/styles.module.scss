@@ -1,0 +1,76 @@
+.textLabel {
+  font-size: var(--p-4);
+  font-weight: var(--font-medium);
+}
+
+.formContainer {
+  display: grid;
+  gap: 16px;
+}
+
+.inputStyle {
+  :global(.MuiOutlinedInput-root) {
+    border-radius: 8px;
+    background-color: var(--bg-primary);
+    margin-top: 4px;
+    height: 52px;
+  }
+
+  // Icon initial position
+  :global(.MuiInputAdornment-positionStart) {
+    margin-left: -3px;
+  }
+
+  // Icon initial color
+  :global(.MuiInputAdornment-root svg) {
+    color: var(--icon-sheen);
+  }
+
+  // Text border
+  :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: var(--bg-sheen);
+  }
+
+  // Text input
+  :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+    border-color: var(--stroke-primary-normal);
+  }
+
+  :global(.MuiOutlinedInput-root.Mui-focused .MuiInputAdornment-root svg) {
+    color: var(--stroke-primary-normal);
+  }
+
+  :global(.MuiOutlinedInput-input) {
+    color: var(--icon-bold);
+    font-size: var(--p-4);
+    font-weight: var(--font-medium);
+    font-family: var(--body-font);
+  }
+
+  :global(.MuiOutlinedInput-input::placeholder) {
+    color: var(--text-placeholder);
+    opacity: 1;
+  }
+}
+
+.forgotButton {
+  display: flex;
+  justify-self: flex-end;
+  font-family: var(--body-font) !important;
+  font-size: var(--p5-size) !important;
+  font-weight: var(--font-semi-bold) !important;
+
+  &:hover {
+    color: var(--text-primary-sheen);
+  }
+}
+
+.signInButton {
+  height: 44px;
+  background-color: var(--bg-primary-normal-constant) !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  font-family: var(--body-font) !important;
+  font-size: var(--p3-size) !important;
+  font-weight: var(--font-semi-bold) !important;
+}
