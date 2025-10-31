@@ -1,0 +1,54 @@
+.boxContainer {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--stroke-sheen);
+
+  h5 {
+    color: var(--text-bold);
+    margin-bottom: 16px;
+  }
+}
+
+.titleText {
+  font-size: var(--p4-size);
+  font-weight: var(--font-medium);
+  color: var(--text-gentle);
+  margin-bottom: 16px;
+}
+
+.trendContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  padding: 5px 8px;
+  gap: 4px;
+  border-radius: 50px;
+  background-color: var(--bg-success-pale);
+  margin-bottom: 8px;
+}
+
+.trendUpIcon {
+  color: var(--text-success-bold);
+}
+
+.trendText {
+  color: var(--text-success-bold);
+  font-size: var(--p5-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.trendDownColor {
+  background-color: var(--bg-warning-pale);
+}
+
+.trendDownTextColor {
+  color: var(--text-success-bold);
+}
+
+.textSubs {
+  font-size: var(--p5-size);
+  font-weight: var(--font-regular);
+  color: var(--text-gentle);
+}

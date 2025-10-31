@@ -3,3 +3,8 @@
   background-color: var(--bg-pale);
   padding-top: var(--header-height);
 }
+
+.titleTextContainer {
+  display: grid;
+  gap: 6px;
+}

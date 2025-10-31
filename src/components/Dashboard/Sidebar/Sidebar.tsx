@@ -1,5 +1,6 @@
 'use client';
 
+import { logout } from '@/app/login/actions';
 import Logo from '@/assets/icons/Logo';
 import styles from '@/components/Dashboard/Sidebar/styles.module.scss';
 import { useDrawerStore } from '@/hooks/useDrawerStore';
@@ -7,6 +8,7 @@ import {
   Box,
   Box1,
   Element4,
+  LogoutCurve,
   Messages3,
   ReceiptText,
   User,
@@ -16,7 +18,11 @@ import { usePathname } from 'next/navigation';
 import { useMemo } from 'react';
 
 const NavLinks = [
-  { label: 'Dashboard', href: '/dashboard', icon: <Element4 size="20" /> },
+  {
+    label: 'Overview',
+    href: '/dashboard/overview',
+    icon: <Element4 size="20" />,
+  },
   {
     label: 'Orders',
     href: '/dashboard/orders',
@@ -53,24 +59,33 @@ export default function Sidebar() {
       />
 
       <div className={`${styles.mobileMenu} ${styleActive}`}>
-        <div className={styles.logoContainer}>
-          <Logo />
+        <div>
+          <div className={styles.logoContainer}>
+            <Logo />
+          </div>
+
+          <div className={styles.linkContainer}>
+            {NavLinks.map(({ label, href, icon }) => {
+              const isActive = pathname === href;
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`${styles.linkStyle} ${isActive ? styles.activeLink : ''}`}
+                >
+                  <span>{icon}</span>
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
-        <div className={styles.linkContainer}>
-          {NavLinks.map(({ label, href, icon }) => {
-            const isActive = pathname === href;
-            return (
-              <Link
-                key={href}
-                href={href}
-                className={`${styles.linkStyle} ${isActive ? styles.activeLink : ''}`}
-              >
-                <span>{icon}</span>
-                {label}
-              </Link>
-            );
-          })}
+        <div style={{ display: 'flex' }}>
+          <button className={styles.logoutButton} onClick={() => logout()}>
+            <LogoutCurve size={20} />
+            Logout
+          </button>
         </div>
       </div>
     </div>

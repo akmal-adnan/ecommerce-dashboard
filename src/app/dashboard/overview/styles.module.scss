@@ -1,0 +1,61 @@
+.mainContainer {
+  height: 100vh;
+  background-color: var(--bg-pale);
+  padding-top: var(--header-height);
+  margin: 20px;
+}
+
+.headerGroup {
+  margin-bottom: 24px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonSubGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.titleTextContainer {
+  display: grid;
+  gap: 6px;
+
+  margin-bottom: 24px;
+}
+
+.calendarButton {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--stroke-sheen);
+  cursor: pointer;
+}
+
+.widgetButton {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--stroke-sheen);
+  cursor: pointer;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: var(--bg-primary-normal-constant);
+  border: 1px solid var(--bg-primary-normal-constant);
+  color: var(--text-white-constant);
+  cursor: pointer;
+}

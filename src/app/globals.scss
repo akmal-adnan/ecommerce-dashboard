@@ -94,8 +94,8 @@
   --bg-pending-pale: var(--pending-50);
   --bg-pending-bold: var(--pending-500);
 
-  --bg-warning-pale: var(--error-50);
-  --bg-warning-bold: var(--error-500);
+  --bg-warning-pale: var(--warning-50);
+  --bg-warning-bold: var(--warning-500);
 
   --bg-info-pale: var(--info-50);
   --bg-info-bold: var(--info-500);
@@ -304,20 +304,7 @@ button {
   background: transparent;
 }
 
-// body.dark {
-//   --purple-gradient: linear-gradient(to right, #9d72d5, #c53898, #fa547b);
-//   --text-primary-dark: var(--text-primary-light);
-//   --text-secondary-dark: var(--text-secondary-light);
-//   --text-muted-dark: var(--text-muted-light);
-//   --black: var(--dark-gray);
-//   --white: #000;
-//   --bg-black: #fafafa;
-//   --bg-white: #1e1c1c;
-//   --white-gradient: var(--white-gradient-dark);
-//   --light-gray: #5d5d5d;
-//   --card-color-gradient: var(--purple-gradient);
-
-//   // --ice-white: #f0f0f0;
-//   // --light-gray: #e0e0e0;
-//   // background-color: var(--bg-white);
-// }
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}

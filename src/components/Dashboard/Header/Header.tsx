@@ -12,17 +12,18 @@ const Header = () => {
     <>
       <header className={styles.headerContainer}>
         <nav className={styles.navigationStyle}>
-          <div className={styles.menuButton} onClick={openDrawer}>
+          <button className={styles.menuButton} onClick={openDrawer}>
             <HamburgerMenu size={24} />
-          </div>
+          </button>
 
           <div className={styles.headerGroup}>
-            <div className={styles.menuButton}>
+            <button className={styles.menuButton}>
               <SearchNormal1 size={24} />
-            </div>
-            <div className={styles.menuButton}>
+            </button>
+
+            <button className={styles.menuButton}>
               <Notification size={24} />
-            </div>
+            </button>
 
             <div className={styles.imageContainer}>
               <Image

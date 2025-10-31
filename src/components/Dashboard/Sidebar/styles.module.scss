@@ -27,6 +27,9 @@
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1000;
   padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &.active {
     left: 0;
@@ -62,4 +65,20 @@
   display: grid;
   gap: 16px;
   margin-top: 40px;
+}
+
+.logoutButton {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  font-size: var(--p4-size);
+  font-weight: var(--font-medium);
+  border-radius: 8px;
+  width: 100%;
+
+  color: var(--text-warning-bold);
+
+  &:hover {
+    background-color: var(--bg-warning-pale);
+  }
 }
