@@ -33,8 +33,37 @@ export const Revenue = {
   },
 };
 
+const ChartsData = [
+  { month: 'Jan', unitsSold: 420, inventoryAvailable: 1200 },
+  { month: 'Feb', unitsSold: 390, inventoryAvailable: 1100 },
+  { month: 'Mar', unitsSold: 480, inventoryAvailable: 950 },
+  { month: 'Apr', unitsSold: 520, inventoryAvailable: 870 },
+  { month: 'May', unitsSold: 610, inventoryAvailable: 800 },
+  { month: 'Jun', unitsSold: 700, inventoryAvailable: 780 },
+  { month: 'Jul', unitsSold: 650, inventoryAvailable: 720 },
+  { month: 'Aug', unitsSold: 740, inventoryAvailable: 680 },
+  { month: 'Sep', unitsSold: 810, inventoryAvailable: 600 },
+  { month: 'Oct', unitsSold: 790, inventoryAvailable: 550 },
+  { month: 'Nov', unitsSold: 850, inventoryAvailable: 500 },
+  { month: 'Dec', unitsSold: 920, inventoryAvailable: 480 },
+];
+
+const TopSellingProducts = [
+  { name: 'Plain T-Shirt', unitsSold: 4863, revenue: 47500 },
+  { name: 'Running Sneakers', unitsSold: 1124, revenue: 12650 },
+  { name: 'Plain T-Shirt', unitsSold: 1675, revenue: 13540 },
+  { name: 'Sneakers', unitsSold: 967, revenue: 6230 },
+  { name: 'Cotton Polo Shirts', unitsSold: 865, revenue: 9780 },
+  { name: 'Cotton Polo 1', unitsSold: 866, revenue: 9780 },
+  { name: 'Cotton Polo 2', unitsSold: 865, revenue: 9781 },
+  { name: 'Cotton Polo 3', unitsSold: 865, revenue: 9782 },
+  { name: 'Cotton Polo 4', unitsSold: 865, revenue: 9783 },
+];
+
 const DATA = {
   Revenue,
+  ChartsData,
+  TopSellingProducts,
 };
 
 export default DATA;

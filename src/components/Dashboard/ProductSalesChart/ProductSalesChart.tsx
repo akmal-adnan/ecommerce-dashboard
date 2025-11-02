@@ -1,5 +1,6 @@
 'use client';
 import styles from '@/components/Dashboard/ProductSalesChart/styles.module.scss';
+import DATA from '@/data/overviewData';
 import { useEffect, useState } from 'react';
 
 import {
@@ -12,22 +13,6 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-
-// Sample data: Product performance by month
-const data = [
-  { month: 'Jan', unitsSold: 420, inventoryAvailable: 1200 },
-  { month: 'Feb', unitsSold: 390, inventoryAvailable: 1100 },
-  { month: 'Mar', unitsSold: 480, inventoryAvailable: 950 },
-  { month: 'Apr', unitsSold: 520, inventoryAvailable: 870 },
-  { month: 'May', unitsSold: 610, inventoryAvailable: 800 },
-  { month: 'Jun', unitsSold: 700, inventoryAvailable: 780 },
-  { month: 'Jul', unitsSold: 650, inventoryAvailable: 720 },
-  { month: 'Aug', unitsSold: 740, inventoryAvailable: 680 },
-  { month: 'Sep', unitsSold: 810, inventoryAvailable: 600 },
-  { month: 'Oct', unitsSold: 790, inventoryAvailable: 550 },
-  { month: 'Nov', unitsSold: 850, inventoryAvailable: 500 },
-  { month: 'Dec', unitsSold: 920, inventoryAvailable: 480 },
-];
 
 const ProductSalesChart = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -46,9 +31,10 @@ const ProductSalesChart = () => {
 
   return (
     <div className={styles.mainContainer}>
+      <div className={styles.titleText}>Product Sales</div>
       <ResponsiveContainer width="100%" height={350}>
         <LineChart
-          data={data}
+          data={DATA.ChartsData}
           margin={{ top: 20, right: 10, left: -10, bottom: 0 }}
         >
           <CartesianGrid stroke="#f0f0f0" horizontal={false} />

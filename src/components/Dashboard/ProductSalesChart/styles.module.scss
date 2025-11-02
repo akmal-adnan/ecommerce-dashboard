@@ -1,7 +1,14 @@
 .mainContainer {
-  border-radius: 10px;
+  border-radius: 16px;
   border: 1px solid var(--stroke-sheen);
   margin-top: 20px;
   padding: 20px;
   background-color: var(--bg-white);
+}
+
+.titleText {
+  font-size: var(--p1-size);
+  font-weight: var(--text-semi-bold);
+  color: var(--text-bold);
+  margin-bottom: 12px;
 }

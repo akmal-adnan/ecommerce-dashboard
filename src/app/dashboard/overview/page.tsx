@@ -1,5 +1,6 @@
 import styles from '@/app/dashboard/overview/styles.module.scss';
 import ProductSalesChart from '@/components/Dashboard/ProductSalesChart/ProductSalesChart';
+import TopSellingProductTable from '@/components/Dashboard/TopSellingProductTable/TopSellingProductTable';
 import TrendSection from '@/components/Dashboard/TrendSection/TrendSection';
 import { Add, Calendar, Element3 } from 'iconsax-reactjs';
 
@@ -32,6 +33,7 @@ const page = () => {
 
       <TrendSection />
       <ProductSalesChart />
+      <TopSellingProductTable />
     </div>
   );
 };
