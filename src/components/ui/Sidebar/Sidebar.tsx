@@ -2,7 +2,7 @@
 
 import { logout } from '@/app/login/actions';
 import Logo from '@/assets/icons/Logo';
-import styles from '@/components/Dashboard/Sidebar/styles.module.scss';
+import styles from '@/components/ui/Sidebar/styles.module.scss';
 import { useDrawerStore } from '@/hooks/useDrawerStore';
 import {
   Box,
@@ -72,6 +72,7 @@ export default function Sidebar() {
                   key={href}
                   href={href}
                   className={`${styles.linkStyle} ${isActive ? styles.activeLink : ''}`}
+                  onClick={closeDrawer}
                 >
                   <span>{icon}</span>
                   {label}

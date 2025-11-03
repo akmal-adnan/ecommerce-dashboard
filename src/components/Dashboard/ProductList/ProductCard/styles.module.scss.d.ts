@@ -1,0 +1,13 @@
+export declare const cardContainer: string;
+export declare const categoryContainer: string;
+export declare const categoryLabel: string;
+export declare const imageContainer: string;
+export declare const imagePlaceholderText: string;
+export declare const price: string;
+export declare const priceStockContainer: string;
+export declare const productTitle: string;
+export declare const skuLabel: string;
+export declare const stockContainer: string;
+export declare const stockLabel: string;
+export declare const stockValue: string;
+export declare const viewButton: string;

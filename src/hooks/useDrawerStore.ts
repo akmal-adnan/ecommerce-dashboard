@@ -10,7 +10,7 @@ type DrawerState = {
 };
 
 export const useDrawerStore = create<DrawerState>((set) => ({
-  isDrawerOpen: false, // default state
+  isDrawerOpen: false,
   openDrawer: () => set({ isDrawerOpen: true }),
   closeDrawer: () => set({ isDrawerOpen: false }),
   toggleDrawer: () => set((state) => ({ isDrawerOpen: !state.isDrawerOpen })),

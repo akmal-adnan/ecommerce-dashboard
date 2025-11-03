@@ -1,0 +1,124 @@
+@use '../../../../styles/variables' as *;
+
+.cardContainer {
+  background-color: var(--bg-white);
+  border: 1px solid var(--stroke-sheen);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
+  justify-content: space-between;
+
+  max-width: 276px;
+  max-height: 447px;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background-color: var(--bg-gentle);
+}
+
+.imagePlaceholderText {
+  font-size: var(--p4-size);
+  color: var(--text-gentle);
+  font-weight: var(--font-medium);
+}
+
+.categoryContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.categoryLabel {
+  font-size: var(--p5-size);
+  color: var(--text-primary-normal);
+  font-weight: var(--font-medium);
+  text-transform: capitalize;
+}
+
+.skuLabel {
+  font-size: var(--p6-size);
+  color: var(--text-gentle);
+  font-weight: var(--font-regular);
+  text-transform: uppercase;
+}
+
+.productTitle {
+  font-size: var(--p3-size);
+  color: var(--text-bold);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceStockContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: var(--h5-size);
+  color: var(--text-bold);
+  font-weight: var(--font-bold);
+  line-height: 1;
+}
+
+.stockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.stockLabel {
+  font-size: var(--p6-size);
+  color: var(--text-gentle);
+  font-weight: var(--font-regular);
+}
+
+.stockValue {
+  font-size: var(--p4-size);
+  color: var(--text-bold);
+  font-weight: var(--font-medium);
+}
+
+.viewButton {
+  font-size: var(--p4-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-primary-normal);
+  height: 36px;
+  border: 1px solid var(--stroke-primary-normal);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: var(--bg-primary-pale);
+  }
+
+  &:active {
+    background-color: var(--bg-primary-sheen);
+  }
+}

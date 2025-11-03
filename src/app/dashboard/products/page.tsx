@@ -1,6 +1,7 @@
 'use client';
 
 import styles from '@/app/dashboard/products/styles.module.scss';
+import ProductList from '@/components/Dashboard/ProductList/ProductList';
 import ButtonIcon from '@/components/ui/ButtonIcon/ButtonIcon';
 import { InputAdornment, TextField } from '@mui/material';
 import {
@@ -84,6 +85,8 @@ const ProductsPage = () => {
           <p className={styles.lastAddedText}>Last Added</p>
         </ButtonIcon>
       </div>
+
+      <ProductList />
     </div>
   );
 };

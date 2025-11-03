@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/components/Dashboard/Header/styles.module.scss';
+import styles from '@/components/ui/Header/styles.module.scss';
 import { useDrawerStore } from '@/hooks/useDrawerStore';
 import { HamburgerMenu, Notification, SearchNormal1 } from 'iconsax-reactjs';
 import Image from 'next/image';

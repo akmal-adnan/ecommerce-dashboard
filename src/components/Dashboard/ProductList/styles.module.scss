@@ -1,0 +1,45 @@
+@use '../../../styles/variables' as *;
+
+.productListContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+  justify-self: center;
+
+  @include min-width(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include min-width(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include min-width(xl) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.loadingContainer,
+.errorContainer,
+.emptyContainer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  border: 1px solid var(--stroke-sheen);
+
+  p {
+    font-size: var(--p3-size);
+    color: var(--text-gentle);
+  }
+}
+
+.errorContainer {
+  p {
+    color: var(--text-warning-bold);
+  }
+}
