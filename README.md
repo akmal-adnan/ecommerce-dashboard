@@ -4,6 +4,13 @@ A modern, responsive e-commerce admin dashboard built with Next.js 16, featuring
 
 **Live Demo:** https://akmal-ecommerce-dashboard.netlify.app
 
+## 🔑 Login credentials:
+
+```
+email: user123@yahoo.com
+password: 12345678
+```
+
 ## 📋 Table of Contents
 
 - [Project Overview](#project-overview)
