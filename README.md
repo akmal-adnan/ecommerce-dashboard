@@ -184,10 +184,10 @@ npm run dev
 
 ### Environment Setup
 
-Currently uses public APIs. Add environment variables in `.env.local` if needed:
+Add environment for jwt token
 
 ```
-NEXT_PUBLIC_API_URL=https://dummyjson.com
+SESSION_SECRET=12345678
 ```
 
 ## 🌐 API Integration
