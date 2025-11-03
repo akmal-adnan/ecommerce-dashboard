@@ -1,5 +1,6 @@
 import styles from '@/app/dashboard/overview/styles.module.scss';
 import ProductSalesChart from '@/components/Dashboard/ProductSalesChart/ProductSalesChart';
+import RecentOrderTable from '@/components/Dashboard/RecentOrderTable/RecentOrderTable';
 import TopSellingProductTable from '@/components/Dashboard/TopSellingProductTable/TopSellingProductTable';
 import TrendSection from '@/components/Dashboard/TrendSection/TrendSection';
 import { Add, Calendar, Element3 } from 'iconsax-reactjs';
@@ -22,6 +23,7 @@ const page = () => {
           <div className={styles.buttonSubGroup}>
             <button className={styles.widgetButton}>
               <Element3 size={24} />
+              <p>Manage Widget</p>
             </button>
 
             <button className={styles.addButton}>
@@ -31,9 +33,23 @@ const page = () => {
         </div>
       </div>
 
-      <TrendSection />
-      <ProductSalesChart />
-      <TopSellingProductTable />
+      <div className={styles.contentGroup}>
+        <div className={styles.trendSection}>
+          <TrendSection />
+        </div>
+
+        <div className={styles.productSalesChart}>
+          <ProductSalesChart />
+        </div>
+
+        <div className={styles.topSellingProductTable}>
+          <TopSellingProductTable />
+        </div>
+
+        <div className={styles.recentOrderTable}>
+          <RecentOrderTable />
+        </div>
+      </div>
     </div>
   );
 };

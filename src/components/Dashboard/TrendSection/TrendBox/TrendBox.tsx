@@ -15,24 +15,26 @@ const TrendBox = ({ title, valueMain, subValue, trendStatus }: Props) => {
 
       <h5>{valueMain}</h5>
 
-      {trendStatus ? (
-        <div className={styles.trendContainer}>
-          <TrendUp size={16} className={styles.trendUpIcon} />
-          <p className={styles.trendText}>{subValue}%</p>
-        </div>
-      ) : (
-        <div className={`${styles.trendContainer} ${styles.trendDownColor}`}>
-          <TrendDown
-            size={16}
-            className={`${styles.trendUpIcon} ${styles.trendDownTextColor}`}
-          />
-          <p className={`${styles.trendText} ${styles.trendDownTextColor}`}>
-            {subValue}%
-          </p>
-        </div>
-      )}
+      <div className={styles.trendGroup}>
+        {trendStatus ? (
+          <div className={styles.trendContainer}>
+            <TrendUp size={16} className={styles.trendUpIcon} />
+            <p className={styles.trendText}>{subValue}%</p>
+          </div>
+        ) : (
+          <div className={`${styles.trendContainer} ${styles.trendDownColor}`}>
+            <TrendDown
+              size={16}
+              className={`${styles.trendUpIcon} ${styles.trendDownTextColor}`}
+            />
+            <p className={`${styles.trendText} ${styles.trendDownTextColor}`}>
+              {subValue}%
+            </p>
+          </div>
+        )}
 
-      <p className={styles.textSubs}>Than last month</p>
+        <p className={styles.textSubs}>Than last month</p>
+      </div>
     </div>
   );
 };

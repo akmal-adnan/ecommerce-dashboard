@@ -1,0 +1,14 @@
+export declare const buttonGroup: string;
+export declare const buttonListActive: string;
+export declare const buttonListContainer: string;
+export declare const buttonListGroup: string;
+export declare const buttonListStyle: string;
+export declare const buttonSubGroup: string;
+export declare const headerGroup: string;
+export declare const inputStyle: string;
+export declare const lastAddedButton: string;
+export declare const lastAddedText: string;
+export declare const mainContainer: string;
+export declare const newProductButton: string;
+export declare const searchGroupContainer: string;
+export declare const titleTextContainer: string;

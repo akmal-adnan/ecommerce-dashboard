@@ -1,6 +1,6 @@
 .boxContainer {
   background-color: var(--bg-white);
-  border-radius: 8px;
+  border-radius: 16px;
   padding: 20px;
   border: 1px solid var(--stroke-sheen);
 
@@ -17,16 +17,26 @@
   margin-bottom: 16px;
 }
 
+.trendGroup {
+  display: grid;
+  gap: 8px;
+  @include min-width(sm) {
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    gap: 8px;
+  }
+}
+
 .trendContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   justify-self: flex-start;
   padding: 5px 8px;
   gap: 4px;
   border-radius: 50px;
   background-color: var(--bg-success-pale);
-  margin-bottom: 8px;
 }
 
 .trendUpIcon {

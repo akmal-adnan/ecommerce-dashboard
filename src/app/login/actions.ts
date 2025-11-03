@@ -2,7 +2,7 @@
 
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
-import { createSession, deleteSession } from '../lib/session';
+import { createSession, deleteSession } from '../../lib/session';
 
 const testUser = {
   id: '1',

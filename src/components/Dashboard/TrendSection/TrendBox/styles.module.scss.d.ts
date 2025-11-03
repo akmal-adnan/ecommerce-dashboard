@@ -4,5 +4,6 @@ export declare const titleText: string;
 export declare const trendContainer: string;
 export declare const trendDownColor: string;
 export declare const trendDownTextColor: string;
+export declare const trendGroup: string;
 export declare const trendText: string;
 export declare const trendUpIcon: string;

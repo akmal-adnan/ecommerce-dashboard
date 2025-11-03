@@ -24,7 +24,6 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
 
-  /* Hide scrollbar for Firefox */
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 
@@ -67,22 +66,11 @@
   color: var(--text-bold);
 }
 
-.productNameContainer {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.imageContainer {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  background-color: var(--bg-sheen);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  svg {
-    color: var(--icon-white);
-  }
+.statusBadge {
+  font-size: var(--p5-size);
+  font-weight: var(--font-medium);
+  padding: 4px 12px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  text-transform: capitalize;
 }

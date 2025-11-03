@@ -32,7 +32,7 @@ const ProductSalesChart = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleText}>Product Sales</div>
-      <ResponsiveContainer width="100%" height={350}>
+      <ResponsiveContainer width="100%" height={267}>
         <LineChart
           data={DATA.ChartsData}
           margin={{ top: 20, right: 10, left: -10, bottom: 0 }}

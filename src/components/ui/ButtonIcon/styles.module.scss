@@ -1,0 +1,15 @@
+.menuButton {
+  all: unset;
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  border: 1px solid var(--stroke-sheen);
+  height: 48px;
+  width: 48px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--bg-gentle);
+  }
+}

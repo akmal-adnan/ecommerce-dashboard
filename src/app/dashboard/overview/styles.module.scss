@@ -1,5 +1,5 @@
 .mainContainer {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--bg-pale);
   padding-top: var(--header-height);
   margin: 20px;
@@ -22,8 +22,18 @@
 .titleTextContainer {
   display: grid;
   gap: 6px;
-
   margin-bottom: 24px;
+
+  h5 {
+    font-weight: var(--font-bold);
+    color: var(--text-bold);
+  }
+
+  p {
+    color: var(--text-gentle);
+    font-size: var(--p4-size);
+    font-weight: var(--font-regular);
+  }
 }
 
 .calendarButton {
@@ -46,6 +56,17 @@
   background-color: var(--bg-white);
   border: 1px solid var(--stroke-sheen);
   cursor: pointer;
+
+  p {
+    display: none;
+    font-size: var(--p4-size);
+    font-weight: var(--font-medium);
+    color: var(--text-bold);
+
+    @include min-width(sm) {
+      display: block;
+    }
+  }
 }
 
 .addButton {
@@ -58,4 +79,33 @@
   border: 1px solid var(--bg-primary-normal-constant);
   color: var(--text-white-constant);
   cursor: pointer;
+}
+
+.contentGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include min-width(md) {
+    display: grid;
+    grid-template-areas:
+      'product product trend'
+      'topSelling recent recent';
+  }
+}
+
+.trendSection {
+  grid-area: trend;
+}
+
+.productSalesChart {
+  grid-area: product;
+}
+
+.topSellingProductTable {
+  grid-area: topSelling;
+}
+
+.recentOrderTable {
+  grid-area: recent;
 }

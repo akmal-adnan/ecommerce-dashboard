@@ -1,0 +1,156 @@
+@use '../../../styles/variables' as *;
+
+.mainContainer {
+  min-height: 100vh;
+  background-color: var(--bg-pale);
+  padding-top: var(--header-height);
+  margin: 20px;
+}
+
+.headerGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+
+  @include min-width(sm) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.searchGroupContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include min-width(sm) {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+.titleTextContainer {
+  display: grid;
+  gap: 6px;
+
+  h5 {
+    font-weight: var(--font-bold);
+    color: var(--text-bold);
+  }
+
+  p {
+    color: var(--text-gentle);
+    font-size: var(--p4-size);
+    font-weight: var(--font-regular);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  order: -1;
+
+  @include min-width(sm) {
+    order: unset;
+  }
+}
+
+.buttonSubGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.newProductButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white-constant);
+  background-color: var(--bg-primary-normal-constant);
+  height: 48px;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.inputStyle {
+  width: 100%;
+
+  :global(.MuiOutlinedInput-root) {
+    border-radius: 8px;
+    background-color: var(--bg-gentle);
+    height: 48px;
+    max-width: none;
+
+    @include min-width(sm) {
+      max-width: 260px;
+    }
+  }
+
+  :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: var(--bg-sheen);
+  }
+
+  :global(.MuiInputAdornment-root svg) {
+    color: var(--icon-bold);
+  }
+}
+
+.buttonListGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.buttonListContainer {
+  display: flex;
+  gap: 12px;
+  background-color: var(--bg-pale);
+  border: 1px solid var(--stroke-sheen);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.buttonListStyle {
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-bold);
+  font-size: var(--p4-size);
+  font-weight: var(--font-medium);
+  background-color: var(--bg-white);
+  cursor: pointer;
+
+  &:hover:not(.buttonListActive) {
+    background-color: var(--bg-primary-sheen);
+    color: var(--text-white-constant);
+  }
+}
+
+.buttonListActive {
+  background-color: var(--bg-primary-normal-constant);
+  color: var(--text-white-constant);
+}
+
+.lastAddedButton {
+  @include min-width(sm) {
+    width: unset !important;
+    display: flex !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+}
+
+.lastAddedText {
+  font-size: var(--p4-size);
+  font-weight: var(--font-medium);
+  color: var(--text-bold);
+  display: none;
+
+  @include min-width(sm) {
+    display: block;
+  }
+}
