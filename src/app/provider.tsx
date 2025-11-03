@@ -1,6 +1,5 @@
 'use client';
 
-// This file is not used for now, but it is a good practice to use it for the future
 import theme from '@/theme/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
