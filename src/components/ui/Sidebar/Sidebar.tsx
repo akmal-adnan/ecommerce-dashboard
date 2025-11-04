@@ -51,6 +51,11 @@ export default function Sidebar() {
     [isDrawerOpen]
   );
 
+  const handleLogout = async () => {
+    closeDrawer();
+    await logout();
+  };
+
   return (
     <div>
       <div
@@ -83,7 +88,7 @@ export default function Sidebar() {
         </div>
 
         <div style={{ display: 'flex' }}>
-          <button className={styles.logoutButton} onClick={() => logout()}>
+          <button className={styles.logoutButton} onClick={handleLogout}>
             <LogoutCurve size={20} />
             Logout
           </button>
