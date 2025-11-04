@@ -10,14 +10,23 @@ import {
   TextField,
 } from '@mui/material';
 import { Eye, EyeSlash, Lock, Sms } from 'iconsax-reactjs';
-import { useActionState, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useActionState, useEffect, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 
 const LoginForm = () => {
+  const router = useRouter();
   const [show, setShow] = useState(false);
   const [state, loginAction] = useActionState(login, { errors: {} });
-  const isEmailcorrect = Boolean(state.errors.email);
-  const isPasswordCorrect = Boolean(state.errors.password);
+  const isEmailcorrect = Boolean(state.errors?.email);
+  const isPasswordCorrect = Boolean(state.errors?.password);
+
+  // Handle redirect on success
+  useEffect(() => {
+    if (state && 'success' in state && state.success) {
+      router.push('/dashboard');
+    }
+  }, [router, state]);
 
   return (
     <form action={loginAction} className={styles.formContainer}>
@@ -33,7 +42,7 @@ const LoginForm = () => {
           variant="outlined"
           placeholder="Enter your email"
           error={isEmailcorrect}
-          helperText={state.errors.email}
+          helperText={state.errors?.email}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -58,7 +67,7 @@ const LoginForm = () => {
           placeholder="Securely enter password"
           type={show ? 'text' : 'password'}
           error={isPasswordCorrect}
-          helperText={state.errors.password}
+          helperText={state.errors?.password}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
