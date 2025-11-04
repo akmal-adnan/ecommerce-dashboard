@@ -59,7 +59,7 @@ const ProductsPage = () => {
 
             <button className={styles.newProductButton}>
               <Add size={24} />
-              New Product
+              <p className={styles.newProductButtonText}>New Product</p>
             </button>
           </div>
         </div>

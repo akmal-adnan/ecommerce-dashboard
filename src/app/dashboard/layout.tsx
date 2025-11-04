@@ -10,7 +10,7 @@ export default function DashboardLayout({
     <div>
       <Header />
       <Sidebar />
-      <main>{children}</main>
+      <main style={{ backgroundColor: 'var(--bg-pale)' }}>{children}</main>
     </div>
   );
 }

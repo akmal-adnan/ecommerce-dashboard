@@ -75,6 +75,12 @@
   cursor: pointer;
 }
 
+.newProductButtonText {
+  font-size: var(--p3-size);
+  font-weight: var(--font-semi-bold);
+  text-wrap: nowrap;
+}
+
 .inputStyle {
   width: 100%;
 

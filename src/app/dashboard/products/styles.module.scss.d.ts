@@ -10,5 +10,6 @@ export declare const lastAddedButton: string;
 export declare const lastAddedText: string;
 export declare const mainContainer: string;
 export declare const newProductButton: string;
+export declare const newProductButtonText: string;
 export declare const searchGroupContainer: string;
 export declare const titleTextContainer: string;
