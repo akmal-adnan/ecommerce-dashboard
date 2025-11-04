@@ -1,3 +1,5 @@
+@use '../../../../styles/variables.scss' as *;
+
 .boxContainer {
   background-color: var(--bg-white);
   border-radius: 16px;
