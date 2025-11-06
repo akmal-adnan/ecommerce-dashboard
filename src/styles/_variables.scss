@@ -1,4 +1,5 @@
 // Mobile-first breakpoints
+$breakpoint-xs: 375px;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
@@ -6,7 +7,11 @@ $breakpoint-xl: 1200px;
 
 // if device width is >= than $breakpoint than do something
 @mixin min-width($breakpoint) {
-  @if $breakpoint == sm {
+  @if $breakpoint == xs {
+    @media (min-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
     @media (min-width: $breakpoint-sm) {
       @content;
     }
@@ -27,7 +32,11 @@ $breakpoint-xl: 1200px;
 
 // if device width is <= than $breakpoint do something
 @mixin max-width($breakpoint) {
-  @if $breakpoint == sm {
+  @if $breakpoint == xs {
+    @media (max-width: $breakpoint-xs) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
     @media (max-width: $breakpoint-sm) {
       @content;
     }

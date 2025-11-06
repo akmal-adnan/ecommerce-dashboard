@@ -4,12 +4,12 @@ import ProductCard from '@/components/Dashboard/ProductList/ProductCard/ProductC
 import styles from '@/components/Dashboard/ProductList/styles.module.scss';
 import { useGetProducts } from '@/hooks/apiQuery/useGetProducts';
 
-interface ProductListProps {
+type ProductListProps = {
   limit?: number;
   skip?: number;
-}
+};
 
-const ProductList = ({ limit = 12, skip = 0 }: ProductListProps) => {
+const ProductList = ({ limit = 30, skip = 0 }: ProductListProps) => {
   const { data, isLoading, isError, error } = useGetProducts({ limit, skip });
 
   if (isLoading) {

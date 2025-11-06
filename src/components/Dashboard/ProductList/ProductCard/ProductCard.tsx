@@ -24,8 +24,8 @@ const ProductCard = ({ product, onViewProduct }: ProductCardProps) => {
             <Image
               src={product.thumbnail}
               alt={product.title}
-              width={200}
-              height={200}
+              width={400}
+              height={400}
             />
           ) : (
             <p className={styles.imagePlaceholderText}>Image here</p>
@@ -37,12 +37,13 @@ const ProductCard = ({ product, onViewProduct }: ProductCardProps) => {
           <span className={styles.skuLabel}>{product.sku}</span>
         </div>
 
-        <h3 className={styles.productTitle}>{product.title}</h3>
+        <h4 className={styles.productTitle}>{product.title}</h4>
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div className={styles.priceStockContainer}>
           <span className={styles.price}>${product.price.toFixed(2)}</span>
+
           <div className={styles.stockContainer}>
             <span className={styles.stockLabel}>Stock</span>
             <span className={styles.stockValue}>{product.stock}</span>

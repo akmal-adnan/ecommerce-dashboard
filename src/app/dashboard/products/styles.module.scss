@@ -108,7 +108,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
   margin-top: 24px;
 }
 
@@ -119,6 +118,11 @@
   border: 1px solid var(--stroke-sheen);
   border-radius: 12px;
   padding: 12px;
+
+  @include max-width(xs) {
+    padding: unset;
+    gap: unset;
+  }
 }
 
 .buttonListStyle {
