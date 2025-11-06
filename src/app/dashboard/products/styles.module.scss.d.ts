@@ -11,5 +11,8 @@ export declare const lastAddedText: string;
 export declare const mainContainer: string;
 export declare const newProductButton: string;
 export declare const newProductButtonText: string;
+export declare const paginationContainer: string;
 export declare const searchGroupContainer: string;
+export declare const skeletonProductCard: string;
+export declare const skeletonProductListContainer: string;
 export declare const titleTextContainer: string;

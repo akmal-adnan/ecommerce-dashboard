@@ -3,7 +3,9 @@
 import styles from '@/app/dashboard/products/styles.module.scss';
 import ProductList from '@/components/Dashboard/ProductList/ProductList';
 import ButtonIcon from '@/components/ui/ButtonIcon/ButtonIcon';
-import { InputAdornment, TextField } from '@mui/material';
+import { useGetProducts } from '@/hooks/apiQuery/useGetProducts';
+import { usePagination } from '@/hooks/usePagination';
+import { InputAdornment, Pagination, Skeleton, TextField } from '@mui/material';
 import {
   Add,
   ArrangeVertical,
@@ -11,7 +13,7 @@ import {
   RowVertical,
   SearchNormal1,
 } from 'iconsax-reactjs';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const buttonList = [
   { label: 'Published' },
@@ -19,8 +21,20 @@ const buttonList = [
   { label: 'Hidden' },
 ];
 
+const limit = 30;
+
 const ProductsPage = () => {
   const [activeButton, setActiveButton] = useState(buttonList[0].label);
+  const { page, skip, handlePageChange } = usePagination({
+    limit,
+  });
+
+  const { data, isLoading } = useGetProducts({ limit, skip });
+
+  const totalPages = useMemo(() => {
+    if (!data?.total) return 0;
+    return Math.ceil(data.total / limit);
+  }, [data?.total]);
 
   return (
     <div className={styles.mainContainer}>
@@ -86,7 +100,52 @@ const ProductsPage = () => {
         </ButtonIcon>
       </div>
 
-      <ProductList />
+      {isLoading && (
+        <div className={styles.skeletonProductListContainer}>
+          {Array.from({ length: 30 }).map((_, index) => (
+            <Skeleton
+              key={index}
+              variant="rectangular"
+              animation="wave"
+              className={styles.skeletonProductCard}
+            />
+          ))}
+        </div>
+      )}
+
+      {data && <ProductList productData={data.products} />}
+
+      {totalPages > 1 && (
+        <Pagination
+          count={totalPages}
+          page={page}
+          onChange={handlePageChange}
+          shape="rounded"
+          className={styles.paginationContainer}
+          sx={{
+            '& .MuiPagination-ul': {
+              gap: '4px',
+            },
+
+            '& .MuiPaginationItem-root': {
+              color: 'var(--text-bold)',
+              fontWeight: 'var(--font-medium)',
+            },
+            '& .MuiPaginationItem-root.Mui-selected': {
+              backgroundColor: 'var(--bg-primary-normal)',
+              color: 'var(--bg-white)',
+              fontWeight: 'var(--font-semi-bold)',
+            },
+            '& .MuiPaginationItem-root.Mui-selected:hover': {
+              backgroundColor: 'var(--bg-primary-bold)',
+            },
+
+            '& .MuiPaginationItem-root:hover': {
+              backgroundColor: 'var(--bg-primary-pale)',
+            },
+          }}
+        />
+      )}
     </div>
   );
 };

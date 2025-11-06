@@ -2,7 +2,7 @@ import axiosClient from '@/lib/axiosClient';
 import { queryKeys } from '@/lib/queryKeys';
 import { ProductResponse } from '@/types/product';
 
-import { useQuery } from '@tanstack/react-query';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
 type Props = {
   skip?: number;
@@ -27,5 +27,6 @@ export const useGetProducts = (props: Props) => {
   return useQuery({
     queryKey: queryKeys.productsList(skip, limit),
     queryFn: () => fetchApi({ skip, limit }),
+    placeholderData: keepPreviousData,
   });
 };

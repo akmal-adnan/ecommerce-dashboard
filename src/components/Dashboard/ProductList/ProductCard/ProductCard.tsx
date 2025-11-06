@@ -24,8 +24,8 @@ const ProductCard = ({ product, onViewProduct }: ProductCardProps) => {
             <Image
               src={product.thumbnail}
               alt={product.title}
-              width={400}
-              height={400}
+              width={200}
+              height={200}
             />
           ) : (
             <p className={styles.imagePlaceholderText}>Image here</p>
