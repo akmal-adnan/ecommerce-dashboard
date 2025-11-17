@@ -22,6 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Emotion insertion point for client-side cache to align style order */}
+        <meta name="emotion-insertion-point" content="" />
+      </head>
       {/*
         Place font class on <body> rather than <html> to avoid potential
         server/client className mismatches during hydration.
