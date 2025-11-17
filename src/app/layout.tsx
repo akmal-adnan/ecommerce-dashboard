@@ -1,7 +1,7 @@
 import '@/app/globals.scss';
-import { Providers } from '@/app/provider';
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
+import ClientProviders from './ClientProviders';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -21,9 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={plusJakarta.variable}>
-      <body>
-        <Providers>{children}</Providers>
+    <html lang="en">
+      {/*
+        Place font class on <body> rather than <html> to avoid potential
+        server/client className mismatches during hydration.
+      */}
+      <body className={plusJakarta.className}>
+        <ClientProviders>{children}</ClientProviders>
       </body>
     </html>
   );
