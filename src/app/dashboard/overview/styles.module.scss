@@ -1,7 +1,10 @@
+@use '../../../styles/variables' as *;
+
 .mainContainer {
   min-height: 100vh;
   background-color: var(--bg-pale);
   padding-top: var(--header-height);
+  padding-bottom: var(--header-height);
   margin: 20px;
 }
 
@@ -82,30 +85,51 @@
 }
 
 .contentGroup {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
+  grid-template-areas:
+    'trend'
+    'product'
+    'topSelling'
+    'recent';
 
   @include min-width(md) {
-    display: grid;
+    grid-template-areas:
+      'product product trend trend'
+      'product product trend trend'
+      'topSelling topSelling recent recent'
+      'topSelling topSelling recent recent';
+  }
+
+  @include min-width(lg) {
     grid-template-areas:
       'product product trend'
+      'product product trend'
+      'topSelling recent recent'
       'topSelling recent recent';
   }
 }
 
 .trendSection {
   grid-area: trend;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .productSalesChart {
   grid-area: product;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .topSellingProductTable {
   grid-area: topSelling;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .recentOrderTable {
   grid-area: recent;
+  min-width: 100px;
+  min-height: 100px;
 }

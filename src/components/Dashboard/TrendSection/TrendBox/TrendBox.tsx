@@ -13,7 +13,7 @@ const TrendBox = ({ title, valueMain, subValue, trendStatus }: Props) => {
     <div className={styles.boxContainer}>
       <p className={styles.titleText}>{title}</p>
 
-      <h5>{valueMain}</h5>
+      <h5 className={styles.valueText}>{valueMain}</h5>
 
       <div className={styles.trendGroup}>
         {trendStatus ? (

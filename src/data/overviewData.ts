@@ -1,7 +1,7 @@
 export const Revenue = {
   dashboardStats: {
     totalRevenue: {
-      value: 45987,
+      value: 459870,
       currency: 'MYR',
       change: {
         percentage: 10.23,

@@ -7,3 +7,4 @@ export declare const trendDownTextColor: string;
 export declare const trendGroup: string;
 export declare const trendText: string;
 export declare const trendUpIcon: string;
+export declare const valueText: string;
