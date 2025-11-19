@@ -1,3 +1,4 @@
+import styles from '@/app/dashboard/styles.module.scss';
 import Header from '@/components/ui/Header/Header';
 import Sidebar from '@/components/ui/Sidebar/Sidebar';
 
@@ -10,7 +11,7 @@ export default function DashboardLayout({
     <div>
       <Header />
       <Sidebar />
-      <main style={{ backgroundColor: 'var(--bg-pale)' }}>{children}</main>
+      <main className={styles.mainContainer}>{children}</main>
     </div>
   );
 }

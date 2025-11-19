@@ -238,9 +238,9 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--p3-size);
-  background-color: var(--bg-pale);
+  background-color: var(--bg-pale) !important;
+  color: var(--text-bold) !important;
   transition: background 0.3s;
-  color: var(--text-bold);
 }
 
 h1 {
@@ -285,24 +285,24 @@ button {
 }
 
 /* Minimalist Apple-like Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   background: transparent;
+// }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(120, 120, 120, 0.25);
-  border-radius: 8px;
-  transition: background 0.2s;
-}
+// ::-webkit-scrollbar-thumb {
+//   background: rgba(120, 120, 120, 0.25);
+//   border-radius: 8px;
+//   transition: background 0.2s;
+// }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(120, 120, 120, 0.85);
-}
+// ::-webkit-scrollbar-thumb:hover {
+//   background: rgba(120, 120, 120, 0.85);
+// }
 
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
+// ::-webkit-scrollbar-corner {
+//   background: transparent;
+// }
 
 .recharts-wrapper:focus,
 .recharts-surface:focus {
