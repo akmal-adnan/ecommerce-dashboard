@@ -1,3 +1,40 @@
 .mainContainer {
-  background-color: red;
+  background-color: var(--bg-pale);
+}
+
+.headerGroup {
+  margin-bottom: 24px;
+}
+
+.titleTextContainer {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 24px;
+
+  h5 {
+    font-weight: var(--font-bold);
+    color: var(--text-bold);
+  }
+
+  p {
+    color: var(--text-gentle);
+    font-size: var(--p4-size);
+    font-weight: var(--font-regular);
+  }
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendarButton {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px;
+  border-radius: 8px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--stroke-sheen);
+  cursor: pointer;
 }
